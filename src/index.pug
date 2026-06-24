@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="assets/styles/style.sass")
+        title Document
+    body
+        include components/mixins
+
+        header
+            +menu(navigationMenu)
+            
+        main
+            section#pricing
+                p misocial
+                h2 select a plan
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                
+                .grid.col_3
+                    +card(cardsInfo.satelite)
+                    +card(cardsInfo.marsohod)
+                    +card(cardsInfo.rocket)
+
+        script(type="module" src="/main.js")

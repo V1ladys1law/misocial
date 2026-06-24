@@ -1,0 +1,72 @@
+-
+    let navigationMenu = [
+        ["Home", "index.html"],
+        ["Why MISOCIAL", "#"],
+        ["Features", "#"],
+        ["Articles", "#"],
+        ["Pricing", "#"]
+    ]
+
+mixin menu(menuItems)
+    .navigation
+        .logo
+            a(href="index.html")
+                img(src="assets/images/Symbol.svg", alt="logomisocial")
+                span misocial
+        nav
+            ul
+                for item in menuItems
+                    li
+                        a(href=item[1]) #{item[0]} 
+        a(href="#" class="btn") get started
+
+-
+    let cardsInfo = {
+        satelite: {
+            img: "assets/images/spytnik.svg",
+            alt: "satelite",
+            personal: "personal",
+            currency: "$",
+            price: "0",
+            isMonth: true,
+            description: ["Lorem ipsum dolor sit amet.", "sed do eiusmod tempor incididunt ut.", "Labore et dolore magna aliqua.", "quis nostrud exercitation ullamco laboris.", "Ea commodo consequat."],
+            btnText: "select plan",
+            href: "#"
+        },
+        marsohod: {
+            img: "assets/images/marsohod.svg",
+            alt: "rover",
+            personal: "personal",
+            currency: "$",
+            price: "29",
+            isMonth: true,
+            description: ["Lorem ipsum dolor sit amet.", "sed do eiusmod tempor incididunt ut.", "Labore et dolore magna aliqua.", "quis nostrud exercitation ullamco laboris.", "Ea commodo consequat."],
+            btnText: "select plan",
+            href: "#"
+        },
+        rocket: {
+            img: "assets/images/rocket.svg",
+            alt: "rocket",
+            personal: "personal",
+            currency: "$",
+            price: "49",
+            isMonth: true,
+            description: ["Lorem ipsum dolor sit amet.", "sed do eiusmod tempor incididunt ut.", "Labore et dolore magna aliqua.", "quis nostrud exercitation ullamco laboris.", "Ea commodo consequat."],
+            btnText: "select plan",
+            href: "#"
+        }
+    }
+
+mixin card(oneCard)
+    figure.card
+        img(src=oneCard.img, alt=oneCard.alt)
+        figcaption
+            p.personal #{oneCard.personal}
+            p.price 
+                span.currency #{oneCard.currency}
+                b #{oneCard.price}
+                | #{oneCard.isMonth ? '/month' : '/year'}
+            ul.description 
+                for item in oneCard.description 
+                    li #{item} 
+            a(href=oneCard.href) #{oneCard.btnText}
