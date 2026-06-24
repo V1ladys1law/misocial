@@ -1,1 +1,9 @@
-@use "./components/mixins"
+@use 'components/mixins' as *
+
+.grid
+    display: grid
+
+.col_3
+    grid-template-columns: 1fr
+    +media(1024)
+        grid-template-columns: repeat(3, 1fr)
