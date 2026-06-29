@@ -1,3 +1,42 @@
 =media($size)
     @media screen and (min-width: #{$size}px)
         @content
+
+=gradient($url)
+    background: linear-gradient(-60deg, #87d3cdc9 0%, #5d33dbd7 100%), #6d45e1 url(#{$url}) no-repeat center/cover
+
+=btn($fixed: true, $empty: false)
+    display: inline-block
+    padding: 17px 0
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #c2c9db
+    font-weight: bold
+    text-align: center
+    border-radius: 25px
+    transition: .5s
+    @if $fixed
+        width: 190px
+        box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+        background-color: #fff
+        border: 1px solid #d7dbe8
+        &:hover
+            border-color: transparent
+            color: #fff
+            background-color: #6e45e2
+    @else
+        width: 150px
+        color: #d7dbe8
+        background-color: transparent
+        border: 1px solid #fff
+        &:hover
+            color: #6e45e2
+            border-color: #6e45e2
+    @if $empty != false 
+        border: 1px solid #6e45e2
+        background-color: #6e45e2
+        color: #d7dbe8
+        transition: .5s
+        &:hover
+            color: #000

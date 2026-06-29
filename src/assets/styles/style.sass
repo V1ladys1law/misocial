@@ -1,9 +1,250 @@
 @use 'components/mixins' as *
 
+*
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+
+body
+    background-color: #f9fafc
+    font-family: "Maven Pro"
+
+.wrapper
+    margin: 0 auto
+    max-width: 1822px
+    padding: 0 15px
+
+li
+    list-style: none
+
+header
+    +gradient('../assets/images/glass.jpg')
+
+.logo a
+    display: flex
+    align-items: center
+    gap: 17px
+
+.nazva
+    font-size: 30px
+    text-transform: uppercase
+    letter-spacing: 6px
+    color: #fff
+    font-weight: bold
+
+.menu li
+    font-size: 16px
+    color: #fff
+    font-weight: 400
+
+.menu
+    display: flex
+    align-items: center
+    gap: 60px
+
+.lopata
+    display: flex
+    align-items: center
+    gap: 60px
+
+.cards
+    padding: 0 0 120px
+
+.navigation
+    display: flex
+    justify-content: space-between
+    padding: 45px 0
+
+.icon svg
+    max-width: 24px
+    max-height: 24px
+
+.light
+    color: #fff
+    .lopata li a
+        &:hover
+            text-decoration: underline
+    a
+        color: #fff
+    .btn
+        +btn($fixed: false, $empty: false)
+
+.dark
+    a span
+        color: #000
+
+    .lopata li a
+        color: #000
+        transition: .5s
+        &:hover
+            color: #756edc
+
+    .btn
+        +btn($fixed: true, $empty: false)
+
+footer .dark
+    .btn
+        +btn($fixed: false, $empty: true)
+
+.main_conteiner
+    padding: 100px 0 360px
+    text-align: center
+
 .grid
     display: grid
+
+.jcsb
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.aic
+    display: flex
+    flex-direction: column
+    align-items: center
 
 .col_3
     grid-template-columns: 1fr
     +media(1024)
+        justify-items: center
+        align-items: center
         grid-template-columns: repeat(3, 1fr)
+
+.social_marketing
+    font-size: 14px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: bold
+
+    &::before,
+    &::after
+        margin: 0 15px 6px
+        content: ""
+        display: inline-block
+        width: 24px
+        height: 1px
+        background-color: #fff
+        flex-shrink: 0
+
+#misocial
+    &::before,
+    &::after
+        margin: 0 15px 6px
+        content: ""
+        display: inline-block
+        width: 24px
+        height: 1px
+        background-color: #6e45e2
+        flex-shrink: 0
+
+.pricing_table_p
+    font-size: 16px
+    color: #fff
+    font-weight: 400
+    text-align: center
+
+.pricing_table
+    font-size: 86px
+    letter-spacing: -3px
+    color: #fff
+    font-weight: 400
+    text-align: center
+
+.pricing_text
+    padding: 110px 0
+    font-size: 60px
+    letter-spacing: -2px
+    color: #4f4f6f
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+
+.pricing_text p
+    letter-spacing: 2px
+    font-size: 16px
+    color: #9fa4af
+    font-family: "Maven Pro"
+    text-align: center
+
+.personal
+    font-size: 14px
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-weight: bold
+    color: #9fa4af
+    text-align: center
+
+.price
+    font-size: 25px
+    font-weight: bold
+    color: #4f4f6f
+    text-align: center
+
+.price b
+    font-size: 60px
+    font-weight: bold
+    color: #4f4f6f
+    text-align: center
+
+.footer_p
+    font-size: 14px
+    color: rgba(#6a6a77, .5 )
+    font-weight: 400
+
+.card_img
+    padding: 50px
+
+.card
+    width: 100%
+    border-radius: 30px
+    background-color: #fff
+    max-width: 440px
+    transition: .5s
+
+    &:hover
+        box-shadow: 0 0 46px rgba(204,204,223,0.71)
+
+.card_btn
+    margin: 60px
+
+#socials
+    padding: 27px 0
+
+#btns
+    display: flex
+    gap: 10px
+
+.driver
+    margin: 0 46px 0
+    height: 1px
+    background-color: rgba(#bdbdc2, .2)
+
+.description
+    padding: 50px 0
+    font-size: 16px
+    color: #9fa4af
+    font-weight: 400
+    text-align: center
+
+.main_get_started
+    padding: 180px
+    +gradient('../assets/images/map.jpg')
+
+.lopata2
+    padding: 18px 0
+    p
+        font-size: 14px
+        letter-spacing: 1px
+        font-weight: bold
+        text-transform: uppercase
+        color: #fff
+        text-align: center
+    h2
+        font-size: 60px
+        letter-spacing: -2px
+        color: #fff
+        font-weight: 400
+        text-align: center

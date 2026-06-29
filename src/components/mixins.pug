@@ -12,13 +12,14 @@ mixin menu(menuItems)
         .logo
             a(href="index.html")
                 img(src="assets/images/Symbol.svg", alt="logomisocial")
-                span misocial
-        nav
-            ul
-                for item in menuItems
-                    li
-                        a(href=item[1]) #{item[0]} 
-        a(href="#" class="btn") get started
+                span.nazva misocial
+        .lopata
+            nav
+                ul.menu
+                    for item in menuItems
+                        li
+                            a(href=item[1]) #{item[0]} 
+            a(href="#" class="btn") get started
 
 -
     let cardsInfo = {
@@ -58,9 +59,9 @@ mixin menu(menuItems)
     }
 
 mixin card(oneCard)
-    figure.card
-        img(src=oneCard.img, alt=oneCard.alt)
-        figcaption
+    figure.card.aic
+        img.card_img(src=oneCard.img, alt=oneCard.alt)
+        figcaption.aic
             p.personal #{oneCard.personal}
             p.price 
                 span.currency #{oneCard.currency}
@@ -69,4 +70,4 @@ mixin card(oneCard)
             ul.description 
                 for item in oneCard.description 
                     li #{item} 
-            a(href=oneCard.href) #{oneCard.btnText}
+            a.btn.card_btn(href=oneCard.href) #{oneCard.btnText}

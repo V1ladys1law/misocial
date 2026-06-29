@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <script type="module" crossorigin src="./assets/js/main.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/js/app.js">
@@ -10,31 +12,42 @@
   </head>
   <body>
     <header>
-          <div class="navigation">
-            <div class="logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span>misocial</span></a></div>
-            <nav>
-              <ul>
-                <li><a href="index.html">Home </a></li>
-                <li><a href="#">Why MISOCIAL </a></li>
-                <li><a href="#">Features </a></li>
-                <li><a href="#">Articles </a></li>
-                <li><a href="#">Pricing </a></li>
-              </ul>
-            </nav><a class="btn" href="#">get started</a>
-          </div>
+      <div class="light wrapper">
+            <div class="navigation">
+              <div class="logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span class="nazva">misocial</span></a></div>
+              <div class="lopata">
+                <nav>
+                  <ul class="menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="#">Why MISOCIAL </a></li>
+                    <li><a href="#">Features </a></li>
+                    <li><a href="#">Articles </a></li>
+                    <li><a href="#">Pricing </a></li>
+                  </ul>
+                </nav><a class="btn" href="#">get started</a>
+              </div>
+            </div>
+      </div>
+      <div class="main_conteiner wrapper">
+        <p class="social_marketing">SOCIAL MARKETING ANALYTICS</p>
+        <h1 class="pricing_table">Pricing Table</h1>
+        <div class="pricing_table_p">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+          <p>elit, sed do eiusmod tempor incididunt ut</p>
+        </div>
+      </div>
     </header>
-    <p>SOCAL MARKETING ANALYTICS</p>
-    <h1>Pricing Table</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-    <p>elit, sed do eiusmod tempor incididunt ut.</p>
     <main>
-      <section id="pricing">
-        <p>misocial</p>
-        <h2>select a plan</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="grid col_3">
-              <figure class="card"><img src="./assets/images/spytnik.svg" alt="satelite">
-                <figcaption>
+      <section class="wrapper" id="pricing">
+        <div class="pricing_text">
+          <p id="misocial"><b>MISOCIAL  </b></p>
+          <h2>Select a plan</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+          <p>elit, sed do eiusmod tempor incididunt ut.</p>
+        </div>
+        <div class="grid col_3 dark cards">
+              <figure class="card aic"><img class="card_img" src="./assets/images/spytnik.svg" alt="satelite">
+                <figcaption class="aic">
                   <p class="personal">personal</p>
                   <p class="price"> <span class="currency">$</span><b>0</b>/month</p>
                   <ul class="description"> 
@@ -43,11 +56,11 @@
                     <li>Labore et dolore magna aliqua. </li>
                     <li>quis nostrud exercitation ullamco laboris. </li>
                     <li>Ea commodo consequat. </li>
-                  </ul><a href="#">select plan</a>
+                  </ul><a class="btn card_btn" href="#">select plan</a>
                 </figcaption>
               </figure>
-              <figure class="card"><img src="./assets/images/marsohod.svg" alt="rover">
-                <figcaption>
+              <figure class="card aic"><img class="card_img" src="./assets/images/marsohod.svg" alt="rover">
+                <figcaption class="aic">
                   <p class="personal">personal</p>
                   <p class="price"> <span class="currency">$</span><b>29</b>/month</p>
                   <ul class="description"> 
@@ -56,11 +69,11 @@
                     <li>Labore et dolore magna aliqua. </li>
                     <li>quis nostrud exercitation ullamco laboris. </li>
                     <li>Ea commodo consequat. </li>
-                  </ul><a href="#">select plan</a>
+                  </ul><a class="btn card_btn" href="#">select plan</a>
                 </figcaption>
               </figure>
-              <figure class="card"><img src="./assets/images/rocket.svg" alt="rocket">
-                <figcaption>
+              <figure class="card aic"><img class="card_img" src="./assets/images/rocket.svg" alt="rocket">
+                <figcaption class="aic">
                   <p class="personal">personal</p>
                   <p class="price"> <span class="currency">$</span><b>49</b>/month</p>
                   <ul class="description"> 
@@ -69,31 +82,41 @@
                     <li>Labore et dolore magna aliqua. </li>
                     <li>quis nostrud exercitation ullamco laboris. </li>
                     <li>Ea commodo consequat. </li>
-                  </ul><a href="#">select plan</a>
+                  </ul><a class="btn card_btn" href="#">select plan</a>
                 </figcaption>
               </figure>
         </div>
       </section>
-      <section id="lopata">
-        <p>SOCAL MARKETING ANALYTICS</p>
-        <h2>Take control of your data</h2>
+      <section class="main_get_started aic">
+        <div class="lopata2">
+          <p>SOCAL MARKETING ANALYTICS</p>
+          <h2>Take control of your data</h2>
+        </div>
+        <section class="dark" id="btns"><a class="btn" href="#">get started</a><a class="btn" href="#">explore features</a></section>
       </section>
-      <section id="btns"><a class="btn" href="#">get started</a><a class="btn2" href="#">explore features</a></section>
     </main>
-    <footer>
-          <div class="navigation">
-            <div class="logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span>misocial</span></a></div>
-            <nav>
-              <ul>
-                <li><a href="index.html">Home </a></li>
-                <li><a href="#">Why MISOCIAL </a></li>
-                <li><a href="#">Features </a></li>
-                <li><a href="#">Articles </a></li>
-                <li><a href="#">Pricing </a></li>
-              </ul>
-            </nav><a class="btn" href="#">get started</a>
-          </div>
-      <section id="socials"><a class="facebook" href="#"><img src="#" alt="facebook"></a><a class="twitter" href="#"><img src="#" alt="twitter"></a><a class="google" href="#"><img src="#" alt="google"></a><a class="instagram" href="#"><img src="#" alt="instagram"></a></section>
+    <footer class="wrapper">
+      <div class="dark">
+            <div class="navigation">
+              <div class="logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span class="nazva">misocial</span></a></div>
+              <div class="lopata">
+                <nav>
+                  <ul class="menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="#">Why MISOCIAL </a></li>
+                    <li><a href="#">Features </a></li>
+                    <li><a href="#">Articles </a></li>
+                    <li><a href="#">Pricing </a></li>
+                  </ul>
+                </nav><a class="btn" href="#">get started</a>
+              </div>
+            </div>
+      </div>
+      <div class="driver"></div>
+      <div class="jcsb">
+        <p class="footer_p">2017 Mass Impressions Tranmautritam. Make the right impression.</p>
+        <section id="socials"></section>
+      </div>
     </footer>
   </body>
 </html>
