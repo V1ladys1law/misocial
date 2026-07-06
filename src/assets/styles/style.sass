@@ -72,6 +72,8 @@ header
         +btn($fixed: false, $empty: false)
 
 .dark
+    .nazva
+        color: #000
     a span
         color: #000
 
@@ -89,8 +91,13 @@ footer .dark
         +btn($fixed: false, $empty: true)
 
 .main_conteiner
-    padding: 100px 0 360px
+    padding: 100px 0 180px
     text-align: center
+
+.header_flex
+    display: flex
+    flex-direction: column
+    align-items: center
 
 .grid
     display: grid
@@ -99,6 +106,12 @@ footer .dark
     display: flex
     align-items: center
     justify-content: space-between
+
+.gap
+    display: block
+    +media(1440)
+        display: flex
+        gap: 50px
 
 .aic
     display: flex
@@ -154,7 +167,9 @@ footer .dark
     text-align: center
 
 .pricing_text
-    padding: 110px 0
+    padding: 120px 0 100px
+
+.select_a_plan
     font-size: 60px
     letter-spacing: -2px
     color: #4f4f6f
@@ -197,15 +212,20 @@ footer .dark
 .card_img
     padding: 50px
 
-.card
-    width: 100%
-    border-radius: 30px
-    background-color: #fff
-    max-width: 440px
-    transition: .5s
+.cards
+    max-width: 1420px
 
-    &:hover
-        box-shadow: 0 0 46px rgba(204,204,223,0.71)
+.card
+    min-width: 100%
+    +media(1024)
+        width: 100%
+        border-radius: 30px
+        background-color: #fff
+        min-width: 440px
+        transition: .5s
+
+        &:hover
+            box-shadow: 0 0 46px rgba(204,204,223,0.71)
 
 .card_btn
     margin: 60px
@@ -214,13 +234,26 @@ footer .dark
     padding: 27px 0
 
 #btns
-    display: flex
-    gap: 10px
+    flex-direction: column
+    +media(1024)
+        flex-direction: row
+        display: flex
+        gap: 10px
 
 .driver
     margin: 0 46px 0
     height: 1px
     background-color: rgba(#bdbdc2, .2)
+
+.arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 50px
+    min-width: 64px
+    min-height: 64px
+    background: #fff
+    border-radius: 32px
 
 .description
     padding: 50px 0

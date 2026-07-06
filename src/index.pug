@@ -14,21 +14,24 @@ html(lang="en")
         header
             div.light.wrapper
                 +menu(navigationMenu)
-            div.main_conteiner.wrapper
-                p.social_marketing SOCIAL MARKETING ANALYTICS
-                h1.pricing_table Pricing Table
-                div.pricing_table_p
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing
-                    p elit, sed do eiusmod tempor incididunt ut
+            div.header_flex
+                div.main_conteiner.wrapper
+                    p.social_marketing SOCIAL MARKETING ANALYTICS
+                    h1.pricing_table Pricing Table
+                    div.pricing_table_p
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing
+                        p elit, sed do eiusmod tempor incididunt ut
+                a(href="#").arrow 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#9fa4af" d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"/></svg>
         main
-            section#pricing.wrapper
+            section#pricing.wrapper.aic
                 div.pricing_text
                     p#misocial
                         b MISOCIAL  
-                    h2 Select a plan
+                    h2.select_a_plan Select a plan
                     p Lorem ipsum dolor sit amet, consectetur adipiscing
                     p elit, sed do eiusmod tempor incididunt ut.
-                .grid.col_3.dark.cards
+                .grid.col_3.dark.cards.gap
                     +card(cardsInfo.satelite)
                     +card(cardsInfo.marsohod)
                     +card(cardsInfo.rocket)
@@ -36,7 +39,7 @@ html(lang="en")
                 div.lopata2
                     p SOCAL MARKETING ANALYTICS
                     h2 Take control of your data
-                section#btns.dark
+                section#btns.dark.aic
                     a(href="#" class="btn") get started
                     a(href="#" class="btn") explore features
         footer.wrapper
