@@ -1,1 +1,1 @@
-
+const o=document.querySelectorAll(".burger"),c=document.querySelectorAll(".navigation"),t=document.querySelector(".overlay");o.forEach((e,s)=>{e.addEventListener("click",()=>{c[s].classList.toggle("active"),t.classList.toggle("active")})});t.addEventListener("click",()=>{c.forEach(e=>e.classList.remove("active")),t.classList.remove("active")});
