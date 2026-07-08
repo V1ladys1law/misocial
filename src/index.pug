@@ -12,7 +12,11 @@ html(lang="en")
         include components/mixins
         .overlay
         header
-            div.light.wrapper.header_wrapper
+            div.light.wrapper.header_wrapper.menu_flex
+                div.logo_mobile.logo
+                    a(href="index.html")
+                        img(src="assets/images/Symbol.svg", alt="logomisocial")
+                        span.nazva misocial
                 +menu(navigationMenu)
 
             div.header_flex
@@ -47,7 +51,7 @@ html(lang="en")
                     a(href="#" class="btn") get started
                     a(href="#" class="btn") explore features
         footer.wrapper
-            div.dark.footer_wrapper
+            div.dark.footer_wrapper.mobile_gap
                 +menu(navigationMenu)
             
             div.driver

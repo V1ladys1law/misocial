@@ -10,27 +10,53 @@ html, body
     overflow-x: hidden
 
 body
+    scroll-behavior: smooth
     background-color: #f9fafc
     font-family: "Maven Pro"
+
+.mobile_gap
+
+    margin: 15px 0
+    display: flex
+    justify-content: right
+
+.logo_mobile
+    @media screen and (min-width: 1023px)
+        display: none
+
+.menu_flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.x
+    display: block
+    position: absolute
+    top: 30px
+    left: 15px
+    @media screen and (min-width: 1023px)
+        display: none
 
 a
     text-decoration: none
 
 .header_wrapper,
 .footer_wrapper
+    content: ""
     position: relative
     display: flex
     align-items: center
-    justify-content: space-between
     width: 100%
     max-width: 100%
+    @media screen and (min-width: 1023px)
+        justify-content: space-between
 
 .burger
     display: block
     cursor: pointer
     background: none
     border: none
-    z-index: 1002
+    z-index: 2
     width: 24px
     height: 24px
     padding: 0
@@ -53,13 +79,14 @@ a
     padding: 45px 0
 
     @media screen and (max-width: 1023px)
+        content: ""
         position: fixed
         top: 0
         right: -100%
         width: 280px
         height: 100vh
         background: #1d153a
-        z-index: 1001
+        z-index: 1003
         transition: .35s
         padding: 80px 30px 40px
         flex-direction: column
@@ -82,7 +109,7 @@ a
 
                 li
                     width: 100%
-                    
+
                     a
                         color: #fff !important
                         font-size: 18px
@@ -93,6 +120,7 @@ a
             right: 0
 
 .overlay
+    content: ""
     position: fixed
     inset: 0
     background: rgba(0, 0, 0, 0.6)
@@ -171,9 +199,11 @@ header
     .burger
         color: #000
     .nazva
-        color: #000
+        color: #fff
+        @media screen and (min-width: 1023px)
+            color: #000
     a span
-        color: #000
+            color: #000
 
     .lopata li a
         color: #000
@@ -184,7 +214,7 @@ header
     .btn
         +btn($fixed: true, $empty: false)
 
-footer 
+footer
     padding-bottom: 30px
     width: 100%
     .dark
@@ -315,8 +345,16 @@ footer
     color: #9fa4af
     text-align: center
 
+.currency
+    content: ""
+    position: absolute
+    top: 0
+    left: -15px
+
 .price
-    font-size: 25px
+    content: ""
+    position: relative
+    font-size: 16px
     font-weight: bold
     color: #4f4f6f
     text-align: center
@@ -339,8 +377,10 @@ footer
 
 .card
     width: 100%
-    max-width: 100%
-    
+    max-width: 440px
+    border: 1px solid #d7dbe8
+    margin-bottom: 15px
+
     +media(1024)
         border-radius: 30px
         background-color: #fff
@@ -450,7 +490,7 @@ footer
         &:hover
             color: #6e45e2
             border-color: #6e45e2
-    @if $empty != false 
+    @if $empty != false
         border: 1px solid #6e45e2
         background-color: #6e45e2
         color: #d7dbe8
