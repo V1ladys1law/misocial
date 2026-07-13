@@ -139,7 +139,12 @@ a
     margin: 0 auto
     max-width: 1822px
     width: 100%
-    padding: 0 15px
+    padding: 25px 15px 0
+    @media screen and (min-width: 1023px)
+        margin: 0 auto
+        max-width: 1822px
+        width: 100%
+        padding: 0px 15px 0
 
 li
     list-style: none
@@ -188,9 +193,12 @@ header
     color: #fff
     .burger
         color: #fff
-    .lopata li a
-        &:hover
-            text-decoration: underline
+    .lopata
+        a
+            color: #fff
+        li a
+            &:hover
+                text-decoration: underline
     a
         color: #fff
     .btn
@@ -238,6 +246,12 @@ footer
     display: grid
     width: 100%
 
+.socials_flex
+    padding: 28px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
 .jcsb
     display: flex
     align-items: center
@@ -264,14 +278,25 @@ footer
     flex-direction: column
     align-items: center
     width: 100%
-
 .col_3
+    display: grid
     grid-template-columns: 1fr
     width: 100%
-    +media(1024)
-        justify-items: center
+    gap: 20px
+    justify-items: center
+    
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+        grid-template-columns: repeat(2, 1fr)
+
+        .card:last-child
+            grid-column: span 2
+
+    @media screen and (min-width: 1024px)
         align-items: center
         grid-template-columns: repeat(3, 1fr)
+
+        .card:last-child
+            grid-column: auto
 
 .social_marketing
     font-size: 14px
@@ -383,14 +408,28 @@ footer
     border-radius: 30px
     border: 1px solid #d7dbe8
     margin-bottom: 15px
-
-    +media(1024)
+    @media screen and (min-width: 1024px)
+        max-width: none
         border-radius: 30px
         background-color: #fff
         transition: .5s
 
         &:hover
             box-shadow: 0 0 46px rgba(204,204,223,0.71)
+
+.socials
+    display: flex
+    align-items: center
+    gap: 15px
+    
+    a
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        transition: transform 0.3s ease
+
+        &:hover
+            transform: translateY(-2px)
 
 .card_btn
     margin: 40px
