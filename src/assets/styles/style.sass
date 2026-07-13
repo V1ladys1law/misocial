@@ -189,6 +189,26 @@ header
     max-width: 24px
     max-height: 24px
 
+.menu li a
+    position: relative
+    display: inline-block
+    text-decoration: none
+    transition: color .3s
+
+    &::before
+        content: ""
+        position: absolute
+        bottom: -5px
+        left: 0
+        width: 0
+        height: 2px
+        background-color: currentColor
+        transition: width .3s ease-in-out
+
+    &:hover
+        &::before
+            width: 100%
+    
 .light
     color: #fff
     .burger
@@ -197,8 +217,22 @@ header
         a
             color: #fff
         li a
+            position: relative
+            display: inline-block
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: -5px
+                left: 0
+                width: 0
+                height: 2px
+                background-color: #fff
+                transition: width .3s ease-in-out
+
             &:hover
-                text-decoration: underline
+                &::before
+                    width: 100%
     a
         color: #fff
     .btn
@@ -214,12 +248,26 @@ header
             color: #000
     a span
             color: #000
-
     .lopata li a
+        position: relative
+        display: inline-block
         color: #000
-        transition: .5s
+        transition: .3s
+
+        &::before
+            content: ""
+            position: absolute
+            bottom: -5px
+            left: 0
+            width: 0
+            height: 2px
+            background-color: currentColor
+            transition: width .3s ease-in-out
+
         &:hover
             color: #756edc
+            &::before
+                width: 100%
 
     .btn
         +btn($fixed: true, $empty: false)
@@ -465,6 +513,9 @@ footer
     min-height: 64px
     background: #fff
     border-radius: 32px
+    transition: .5s
+    &:hover
+        transform: translateY(+7px)
 
 .description
     padding: 40px 0
