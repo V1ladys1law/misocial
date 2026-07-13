@@ -9,18 +9,19 @@ html, body
     width: 100%
     overflow-x: hidden
 
-body
+html
     scroll-behavior: smooth
+
+body
     background-color: #f9fafc
     font-family: "Maven Pro"
 
 .mobile_gap
-    margin: 15px 0
     display: flex
     justify-content: right
 
 .logo_mobile
-    @media screen and (min-width: 1023px)
+    @media screen and (min-width: 1250px)
         display: none
 
 .menu_flex
@@ -36,7 +37,7 @@ body
     position: absolute
     top: 30px
     left: 15px
-    @media screen and (min-width: 1023px)
+    @media screen and (min-width: 1250px)
         display: none
 
 a
@@ -50,7 +51,7 @@ a
     align-items: center
     width: 100%
     max-width: 100%
-    @media screen and (min-width: 1023px)
+    @media screen and (min-width: 1250px)
         justify-content: space-between
 
 .burger
@@ -80,7 +81,7 @@ a
     width: 100%
     padding: 45px 0
 
-    @media screen and (max-width: 1023px)
+    @media screen and (max-width: 1250px)
         content: ""
         position: fixed
         top: 0
@@ -208,7 +209,7 @@ header
     &:hover
         &::before
             width: 100%
-    
+
 .light
     color: #fff
     .burger
@@ -244,7 +245,7 @@ header
         color: #000
     .nazva
         color: #fff
-        @media screen and (min-width: 1023px)
+        @media screen and (min-width: 1250px)
             color: #000
     a span
             color: #000
@@ -299,7 +300,7 @@ footer
     display: flex
     justify-content: space-between
     align-items: center
-    @media screen and (max-width: 1023px)
+    @media screen and (max-width: 1024px)
         flex-direction: column
         gap: 25px
 
@@ -335,7 +336,7 @@ footer
     width: 100%
     gap: 20px
     justify-items: center
-    
+
     @media screen and (min-width: 768px) and (max-width: 1023px)
         grid-template-columns: repeat(2, 1fr)
 
@@ -472,7 +473,7 @@ footer
     display: flex
     align-items: center
     gap: 15px
-    
+
     a
         display: inline-flex
         align-items: center
